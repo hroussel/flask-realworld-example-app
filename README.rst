@@ -15,17 +15,19 @@ add the following to ``.bashrc`` or ``.bash_profile``.
 
     export CONDUIT_SECRET='something-really-secret'
 
+Then run the following commands to bootstrap your environment ::
+
+    git clone git@github.com:hroussel/flask-realworld-example-app.git
+    cd flask-realworld-example-app
+    virtualenv -p python3 .
+    source bin/activate
+    pip install -r requirements/dev.txt
+
 Before running shell commands, set the ``FLASK_APP`` and ``FLASK_DEBUG``
 environment variables ::
 
-    export FLASK_APP=/path/to/autoapp.py
+    export FLASK_APP=./autoapp.py
     export FLASK_DEBUG=1
-
-Then run the following commands to bootstrap your environment ::
-
-    git clone https://github.com/gothinkster/flask-realworld-example-app.git
-    cd flask-realworld-example-app
-    pip install -r requirements/dev.txt
 
 
 Run the following commands to create your app's
