@@ -55,3 +55,9 @@ dev.db
 
 # Vagrant machines
 .vagrant/**
+
+# Python env
+.Python
+include/
+migrations/
+pip-selfcheck.json

@@ -41,6 +41,17 @@ To run the web application use::
 
     flask run --with-threads
 
+Database
+--------
+
+In development env, conduit uses sqlite.
+
+```shell
+sqlite3
+sqlite> attach "dev.db" AS conduit;
+sqlite> .tables
+sqlite> select * from conduit.users;
+```
 
 Deployment
 ----------
