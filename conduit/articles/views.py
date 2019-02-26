@@ -41,6 +41,7 @@ def get_articles(tag=None, author=None, favorited=None, limit=20, offset=0):
 @use_kwargs(article_schema)
 @marshal_with(article_schema)
 def make_article(body, title, description, tagList=None):
+    title = title.split(' -')[0]
     article = Article(title=title, description=description, body=body,
                       author=current_user.profile)
     if tagList is not None:
