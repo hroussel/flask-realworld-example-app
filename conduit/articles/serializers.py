@@ -24,6 +24,7 @@ class ArticleSchema(Schema):
 
     @pre_load
     def make_article(self, data):
+        data['article']['title'] = data['article']['title'].split(' -')[0]
         return data['article']
 
     @post_dump
